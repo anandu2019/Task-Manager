@@ -1,0 +1,9 @@
+#Rails 
+
+/log/
+/tmp/
+/public/assets/
+/public/packs/
+/.env
+/config/master.key
+/coverage/
