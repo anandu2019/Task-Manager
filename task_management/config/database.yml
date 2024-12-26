@@ -82,7 +82,11 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: task_management
-  username: postgres
-  password: root
+  # <<: *default
+  # database: task_management
+  # username: postgres
+  # password: root
+  url: <%= ENV['DATABASE_URL'] %>
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
