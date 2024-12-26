@@ -160,3 +160,47 @@ puma (6.5.0) lib/puma/request.rb:98:in `handle_request'
 puma (6.5.0) lib/puma/server.rb:468:in `process_client'
 puma (6.5.0) lib/puma/server.rb:249:in `block in run'
 puma (6.5.0) lib/puma/thread_pool.rb:166:in `block in spawn_thread'
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_USERNAME[0m, and [36mJWT_SECRET_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/login" for ::1 at 2024-12-26 11:01:45 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <class:UsersController> at C:/Task_Manager_Project/task_management/app/controllers/users_controller.rb:3)
+Processing by UsersController#login as HTML
+  Parameters: {"email"=>"nair.anandu94@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"nair.anandu94@gmail.com"}}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nair.anandu94@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 395ms (Views: 11.8ms | ActiveRecord: 48.4ms | Allocations: 43093)
+
+
+Started GET "/tasks" for ::1 at 2024-12-26 11:01:51 -0800
+Processing by StaticController#index as HTML
+  Parameters: {"path"=>"tasks"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_request'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1300)
+
+
+Started POST "/login" for ::1 at 2024-12-26 11:02:49 -0800
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <class:UsersController> at C:/Task_Manager_Project/task_management/app/controllers/users_controller.rb:3)
+Processing by UsersController#login as HTML
+  Parameters: {"email"=>"nair.anandu94@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"nair.anandu94@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nair.anandu94@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 285ms (Views: 1.4ms | ActiveRecord: 4.0ms | Allocations: 3837)
+
+
+Started GET "/tasks" for ::1 at 2024-12-26 11:02:51 -0800
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_request'
+  [1m[36mTask Load (3.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:6:in `index'
+No serializer found for resource: #<Task id: 8, title: "gggg", description: "sdfdsfsdfsdfsfsf", due_date: "2024-12-04", status: "Pending", user_id: 1, created_at: "2024-12-25 13:17:34.025250000 +0000", updated_at: "2024-12-25 13:17:34.025250000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Task::ActiveRecord_Associations_CollectionProxy (7.1ms)
+Completed 200 OK in 244ms (Views: 108.3ms | ActiveRecord: 7.9ms | Allocations: 33618)
+
+
+[dotenv] Set [36mDB_HOST[0m, [36mDB_NAME[0m, [36mDB_PASSWORD[0m, [36mDB_USERNAME[0m, and [36mJWT_SECRET_KEY[0m
+[dotenv] Loaded [33m.env[0m
