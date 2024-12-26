@@ -25,9 +25,11 @@ class SignupForm extends Component {
     })
     .then(response => {
       console.log('User signed up successfully:', response.data);
+      alert("User signup successful");
     })
     .catch(error => {
       console.error('Error signing up:', error.response.data);
+      alert("User signup failed");
     });
   };
 
