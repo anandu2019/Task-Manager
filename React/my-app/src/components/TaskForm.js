@@ -99,7 +99,7 @@ class TaskForm extends Component {
               className="task-form-toggle-overdue-button"
               onClick={this.props.toggleTaskList}
             >
-            Overdue
+            {!this.props.showTaskList ? 'Overdue' : 'Back to TaskList'} 
             </button>
           </div>
         </form>
