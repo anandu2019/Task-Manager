@@ -1,5 +1,6 @@
 # Task-Manager
 
+Node should be  installed.
 1.Open React/my-app then npm install 
 2.In the same path  React/my-app type npm start runs in port 4000 (http://localhost:4000/)
 3.Open cmd for  task_management folder and type bundle install .
@@ -9,6 +10,9 @@
 
 For Pgadmin table
 tables created are user, task
+1.) Open the task_management folder
+2.) Give rails db:create 
+3.) Give rails db:migrate
 
 
 In the project there is are there buttons 
@@ -18,5 +22,5 @@ In the project there is are there buttons
 
 
 
-Note: Node should installed.
+
 
