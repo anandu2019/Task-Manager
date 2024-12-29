@@ -2,7 +2,7 @@
 
 Node should be  installed.
 1.Open React/my-app then npm install 
-2.In the same path  React/my-app type npm start runs in port 4000 (http://localhost:4000/)
+2.In the same path  i.e in React/my-app type npm start (runs in port 4000 (http://localhost:4000/))
 3.Open cmd for  task_management folder and type bundle install .
 4.In the same cmd do rails s (runs in localhost:3000)
 5.Install postgress 11 or 12 
@@ -19,6 +19,15 @@ In the project there is are there buttons
 1.Create Task for creating task 
 2.Logout button for loging out the user.
 3.Overdue task for  listing out the overdue tasks in the list
+
+
+Note(envornment varibales should be set for the following)
+Examples
+C:\Ruby30-x64\bin
+C:\Users\user\AppData\Roaming\npm
+C:\Program Files\Git\bin
+C:\Program Files\PostgreSQL\12\bin
+
 
 
 
