@@ -4,9 +4,7 @@ RSpec.describe TasksController, type: :controller do
   let(:user) { create(:user) } # Assuming you have a User factory
   let(:task) { create(:task, user: user) } # Assuming you have a Task factory
 
-  before do
-    sign_in user # If using Devise for authentication
-  end
+
 
   describe "GET #index" do
     it "returns a successful response" do
