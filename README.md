@@ -1,4 +1,25 @@
-# Task-Manager
+1. # Task-Manager
+Task Manager is a simple application that allows users to manage their tasks. It supports user authentication, task creation, updating, deletion, and retrieval.
+
+2. Features included
+a.) User authentication (Sign up and Log in).
+b.) CRUD operations on tasks (Create, Read, Update, Delete).
+c.) Fetching overdue tasks by status(not completed ones will be fetched).
+
+3.) Technologies Used
+Front end  language: React
+Backend Api and logic: Ruby on Rails
+Database: PostgreSQL
+Testing: RSpec 
+
+4. Challenges Faced
+Challenge: For preparing query for  overdue tasks and grouping by status.
+
+5. Assumptions
+Overdue tasks are defined strictly as tasks with a past due date and a status other than 'completed'.
+
+
+Steps to run locally.
 
 Node should be  installed.
 1.Open React/my-app then npm install 
