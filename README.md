@@ -41,13 +41,21 @@ In the project there is are there buttons
 2.Logout button for loging out the user.
 3.Overdue task for  listing out the overdue tasks in the list
 
-
 Note(envornment varibales should be set for the following)
 Examples
 C:\Ruby30-x64\bin
 C:\Users\user\AppData\Roaming\npm
 C:\Program Files\Git\bin
 C:\Program Files\PostgreSQL\12\bin
+
+
+Instructions for running the test cases.
+
+1. For user model test cases
+rspec spec/models/user_spec.rb from root path
+
+2. For all REST API cases
+ rspec spec/models/user_spec.rb
 
 
 
