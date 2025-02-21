@@ -29,7 +29,7 @@ class TasksController < ApplicationController
   end
 
   def overdue_tasks
-    overdue_tasks = Task.where('due_date < ? AND status != ?', Time.now, 'Completed')  
+    overdue_tasks = Task.where('due_date < ? AND status != ?', Time.now, 'Completed')  //due date logic added
     grouped_tasks = overdue_tasks.group_by(&:status)  
 
     # Render the grouped tasks as JSON
